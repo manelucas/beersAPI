@@ -20,7 +20,7 @@ const App = () => {
   getBeers();
   return (
     <div>
-      {/* <p>Hello</p> */}
+      <p>Hello</p>
       {/* <BoozeList beers={beers}/> */}
       {/* <Navbar searchbeers={beers}/> */}
     </div>
