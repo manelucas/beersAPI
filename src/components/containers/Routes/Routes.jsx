@@ -1,13 +1,13 @@
 import React from 'react'
 import { Router } from '@reach/router'
-import SignUp from '../SignUp/SignUp'
+import SignUp from '../../SignUp/SignUp'
 
 
 const Routes = () => {
 
     return (
         <Router>
-            <SignUp path="SignUp" />
+            <SignUp path="/SignUp" />
         </Router>
     )
 }
