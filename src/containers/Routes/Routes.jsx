@@ -1,6 +1,6 @@
 import React from 'react'
 import { Router } from '@reach/router'
-import SignUp from '../../SignUp/SignUp'
+import SignUp from '../../components/SignUp/SignUp'
 
 
 const Routes = () => {

@@ -8,25 +8,32 @@
   border-radius: 5px;
   box-shadow: 0 0 0 1px rgba(20, 20, 20, 0.05),
     0 4px 12px -4px rgba(20, 20, 20, 0.2);
+  background-color: rgb(201, 248, 238);
 
+  h2 {
+    color: orange;
+    height: 50px;
+  }
   img {
-    height: 220px;
+    height: 150px;
     display: block;
     margin: 0 auto;
   }
 
-  .beer {
-    background: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    width: 20%;
-    color: #333;
-    background-color: orange;
-    list-style: none;
-
-    img {
-      width: 90px;
-      height: 200px;
-    }
+  p {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  // span {
+  //   height: 100px;
+  //   width: 120px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   font-weight: 900;
+  //   border-right: black solid 2px;
+  // }
 }

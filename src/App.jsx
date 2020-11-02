@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import BoozeList from './components/BoozeList'
 import styles from './App.module.scss';
-import SearchBox from './components/SearchBox/SearchBox';
+// import SearchBox from './components/SearchBox/SearchBox';
 // import Routes from './components/Routes';
 import firebase, { provider } from "./firebase";
+import Navbar from './components/Navbar';
 
 const App = () => {
   const [beers, setBeers ] = useState([]);
@@ -67,10 +68,15 @@ const App = () => {
 
   return (
       <main className={styles.main}>
-        <SearchBox getBeersByName={getBeersByName} signIn={signIn} user={user} signOut={signOut}/>
+        <Navbar getBeersByName={getBeersByName} />
         <BoozeList beers={beers} />
       </main>
   );
 };
 
+{/* <Navbar getBeersByName={getBeersByName} signIn={signIn} user={user} signOut={signOut}/> */}
+
 export default App;
+
+
+

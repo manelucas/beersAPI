@@ -3,7 +3,7 @@ import styles from './BoozeItem.module.scss'
 
 const BoozeItem = (props) => {
     
-    const { name, image_url, description } = props.beer
+    const { name, image_url, description, abv } = props.beer
 
     // let shortDescription = (description) => {
     //     return description.length < 100 
@@ -16,7 +16,10 @@ const BoozeItem = (props) => {
             <div className={styles.name}>
                 <h2>{name}</h2>
             </div>
-            <img src={image_url} alt="beer empire"/>
+            <div className={styles.imagesContainer}>
+                <img src={image_url} alt="beer empire"/>
+            </div>
+            <p>ABV: {abv}</p>
             <p>{description}</p>
         </div>
     )
