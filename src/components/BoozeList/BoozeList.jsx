@@ -1,5 +1,6 @@
 import React from 'react'
 import BoozeItem from '../BoozeItem'
+import styles from './BoozeList.module.scss'
 
 const BoozeList = (props) => {
 

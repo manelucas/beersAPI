@@ -7,7 +7,6 @@ const Navbar = (props) => {
 
     return (
         <div className={styles.navbar}>
-            <h1>I am working</h1>
             <SearchBox getBeersByName={props.getBeersByName}/>
             <FilterList />
         </div>

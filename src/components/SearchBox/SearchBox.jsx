@@ -9,17 +9,19 @@ const SearchBox = (props) => {
 
   return (
     <div className={styles.searchBox}>
-      <input type="text" placeholder="type your beer type" onInput={(e) => {
+      <input type="text" placeholder=" Type your beer type" onInput={(e) => {
           props.getBeersByName(e.target.value);
         }}/>
-      {/* <span user={user}>
+      
+    </div>
+  );
+};
+
+{/* <span user={user}>
         <button onClick={signIn}>Sign In</button>
       </span>
       <span user={user}>
         <button onClick={signOut}>Sign Out</button>
       </span> */}
-    </div>
-  );
-};
 
 export default SearchBox;

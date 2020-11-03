@@ -20,6 +20,7 @@ const BoozeItem = (props) => {
                 <img src={image_url} alt="beer empire"/>
             </div>
             <p>ABV: {abv}</p>
+            <hr/>
             <p>{description}</p>
         </div>
     )

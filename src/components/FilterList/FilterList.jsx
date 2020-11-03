@@ -4,8 +4,8 @@ const FilterList = () => {
 
     return(
         <div>
-            <h1>working</h1>
-            <input type="checkbox" />
+            {/* <h1>working</h1> */}
+            {/* <input type="checkbox" /> */}
         </div>
     )
 }
