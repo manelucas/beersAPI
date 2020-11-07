@@ -1,29 +1,24 @@
-import React from 'react'
-import styles from './BoozeItem.module.scss'
+import React from "react";
+import styles from "./BoozeItem.module.scss";
 
 const BoozeItem = (props) => {
-    
-    const { name, image_url, description, abv } = props.beer
+  const { name, image_url, description, abv } = props.beer;
 
-    // let shortDescription = (description) => {
-    //     return description.length < 100 
-    //     ? description
-    //     : description.subString(0, 100) + "...";    
-    // }
+  // let shortDescription = (description) => {
+  //     return description.length < 100
+  //     ? description
+  //     : description.subString(0, 100) + "...";
+  // }
 
-    return (
-        <div className={styles.container}>
-            <div className={styles.name}>
-                <h2>{name}</h2>
-            </div>
-            <div className={styles.imagesContainer}>
-                <img src={image_url} alt="beer empire"/>
-            </div>
-            <p>ABV: {abv}</p>
-            <hr/>
-            <p>{description}</p>
-        </div>
-    )
-}
+  return (
+    <div className={styles.container}>
+      <h2>{name}</h2>
+      <img src={image_url} alt="beer empire" />
+      <p className={styles.abv}>ABV: {abv}</p>
+      <hr />
+      <p className={styles.description}>{description}</p>
+    </div>
+  );
+};
 
-export default BoozeItem
+export default BoozeItem;

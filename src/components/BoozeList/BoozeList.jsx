@@ -1,20 +1,15 @@
-import React from 'react'
-import BoozeItem from '../BoozeItem'
-import styles from './BoozeList.module.scss'
+import React from "react";
+import BoozeItem from "../BoozeItem";
+import styles from "./BoozeList.module.scss";
 
 const BoozeList = (props) => {
+  return (
+    <section>
+      {props.beers.map((beer) => {
+        return <BoozeItem key={beer.id} beer={beer} />;
+      })}
+    </section>
+  );
+};
 
-return (
-    <>
-      <section>
-        {props.beers.map(beer => {
-          return <div><BoozeItem key={beer.id} beer={beer}/></div>
-        })}
-      </section>
-    </>
-  )
-}
-
-
-export default BoozeList
-
+export default BoozeList;
