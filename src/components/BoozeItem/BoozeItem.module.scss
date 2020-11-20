@@ -4,10 +4,12 @@
   padding: 20px 14px;
   text-align: center;
   width: 350px;
+  height: 700px;
   margin: 50px auto 0 auto;
   border: 3px rgb(138, 138, 10) solid;
   background-color: #f7f7f7;
   border-radius: 5px;
+  position: relative;
   box-shadow: 0 0 0 1px rgba(20, 20, 20, 0.05),
     0 4px 12px -4px rgba(20, 20, 20, 0.2);
 
@@ -22,11 +24,24 @@
 
   h2 {
     color: orange;
-    font-size: 25px;
+    font-size: 28px;
     height: 80px;
+    text-shadow: 1px 1px black;
   }
   img {
-    height: 180px;
+    height: 80%;
+    // width: 80%;
+    position: absolute;
+    top: 10%;
+    // left: calc(100% - width/2);
+    // margin and height needs to be half of its width in order to the image to be centered:
+    // margin: -175px;
+    // height: -375px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
     width: auto;
     display: block;
     margin: 0 auto;

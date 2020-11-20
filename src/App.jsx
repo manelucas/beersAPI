@@ -8,17 +8,19 @@ import Navbar from "./components/Navbar";
 
 const App = () => {
   const [beers, setBeers] = useState([]);
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
 
   useEffect(() => {
-    getUser();
+    // getUser();
     getBeers();
   }, []);
 
   const getBeers = async (searchTerm) => {
     // if there is a searchterm then append ? https://api.punkapi.com/v2/beers/beer_name to URL
     const url = "https://api.punkapi.com/v2/beers";
-    if (searchTerm) url += `?beer_name=${searchTerm}`;
+    // if (searchTerm) {
+    //   url += `?beer_name=${searchTerm}`;
+    // }
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
@@ -27,31 +29,31 @@ const App = () => {
       });
   };
 
-  const signIn = () => {
-    firebase.auth().signInWithRedirect(provider);
-  };
+  // const signIn = () => {
+  //   firebase.auth().signInWithRedirect(provider);
+  // };
 
-  const signOut = () => {
-    firebase.auth().signOut();
-    console
-      .log("Am i working")
-      .then(() => {
-        setUser(null);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // const signOut = () => {
+  //   firebase.auth().signOut();
+  //   console
+  //     .log("Am i working")
+  //     .then(() => {
+  //       setUser(null);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
-  const getUser = () => {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-    });
-  };
+  // const getUser = () => {
+  //   firebase.auth().onAuthStateChanged((user) => {
+  //     if (user) {
+  //       setUser(user);
+  //     } else {
+  //       setUser(null);
+  //     }
+  //   });
+  // };
 
   return (
     <main className={styles.main}>

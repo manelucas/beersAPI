@@ -1,17 +1,12 @@
 import React from "react";
 import styles from "./SearchBox.module.scss";
-// import { Link } from "@reach/router";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SearchBox = (props) => {
-  // const {signIn, signOut, user} = props
-
   return (
     <div className={styles.searchBox}>
-      <label>Search me: </label>
       <input
         type="text"
-        placeholder=" Type your beer type"
+        placeholder="Beer me in mind"
         onInput={(e) => {
           props.getBeers(e.target.value);
         }}
