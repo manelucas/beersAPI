@@ -17,14 +17,11 @@ const App = () => {
 
   const getBeers = async (searchTerm) => {
     // if there is a searchterm then append ? https://api.punkapi.com/v2/beers/beer_name to URL
-    const url = "https://api.punkapi.com/v2/beers";
-    // if (searchTerm) {
-    //   url += `?beer_name=${searchTerm}`;
-    // }
+    const url = searchTerm ? `https://api.punkapi.com/v2/beers?beer_name=${searchTerm}` : "https://api.punkapi.com/v2/beers";
     fetch(url)
       .then((res) => res.json())
-      .then((res) => {
-        setBeers(res);
+      .then((data) => {
+        setBeers(data);
         console.log("getBeers was called");
       });
   };
