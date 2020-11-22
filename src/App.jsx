@@ -3,7 +3,7 @@ import BoozeList from "./components/BoozeList";
 import styles from "./App.module.scss";
 // import SearchBox from './components/SearchBox/SearchBox';
 // import Routes from './components/Routes';
-import firebase, { provider } from "./firebase";
+import firebase from "./firebase";
 import Navbar from "./components/Navbar";
 
 const App = () => {
@@ -16,13 +16,11 @@ const App = () => {
   }, []);
 
   const getBeers = async (searchTerm) => {
-    // if there is a searchterm then append ? https://api.punkapi.com/v2/beers/beer_name to URL
-    const url = searchTerm ? `https://api.punkapi.com/v2/beers?beer_name=${searchTerm}` : "https://api.punkapi.com/v2/beers";
+    const url = await searchTerm ? `https://api.punkapi.com/v2/beers?beer_name=${searchTerm}` : "https://api.punkapi.com/v2/beers";
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
         setBeers(data);
-        console.log("getBeers was called");
       });
   };
 

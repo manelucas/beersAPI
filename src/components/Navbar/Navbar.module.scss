@@ -1,20 +1,22 @@
 section {
   .titleContainer {
-    display: flex;
-    width: 100%;
     height: 20vh;
+    width: 100%;
     background-color: #178b8f;
     border: black solid 5px;
     border-radius: 20px;
     color: #f0f0f0;
     padding: 24px;
 
-    .title {
+    h1 {
       margin: 0 auto;
-      font-size: 45px;
+      font-size: 35px;
+      width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      letter-spacing: 0.2rem;
     }
   }
 }
