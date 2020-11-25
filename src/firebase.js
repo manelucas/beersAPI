@@ -5,22 +5,19 @@ import "firebase/auth";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyC3x4eC5sUS4BIYQPsIa9q5MMm2ycsx9lw",
-    authDomain: "beersapi.firebaseapp.com",
-    databaseURL: "https://beersapi.firebaseio.com",
-    projectId: "beersapi",
-    storageBucket: "beersapi.appspot.com",
-    messagingSenderId: "120438303662",
-    appId: "1:120438303662:web:dcd4dd8a8d58940b15f63f",
-    measurementId: "G-KSJFR5TDGC"
-  };
+  apiKey: "AIzaSyD_1Z8eDFZDnGBt7M9uInd1XDZTDtZMtfg",
+  authDomain: "beer-api-713a5.firebaseapp.com",
+  databaseURL: "https://beer-api-713a5.firebaseio.com",
+  projectId: "beer-api-713a5",
+  storageBucket: "beer-api-713a5.appspot.com",
+  messagingSenderId: "938397888569",
+  appId: "1:938397888569:web:efdd6ce123ae3776655de8"
+};
 
+firebase.initializeApp(firebaseConfig);
 
-  firebase.initializeApp(firebaseConfig);
+export const firestore = firebase.firestore();
 
-  export const firestore = firebase.firestore();
-  
-  export const provider = new firebase.auth.GoogleAuthProvider();
-  
-  export default firebase;
-  
+export const provider = new firebase.auth.GoogleAuthProvider();
+
+export default firebase;
